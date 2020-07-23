@@ -1,6 +1,6 @@
 var slideItem = 0;
 window.onload = function() {
-	setInterval(passarSlide, 2000);
+	setInterval(passarSlide, 7000);
 
 	var slidewidth = document.getElementById("slideshow").offsetWidth;
 	var objs = document.getElementsByClassName("slide");
@@ -23,6 +23,7 @@ function mudarSlide(pos) {
 	slideItem = pos;
 	var slidewidth = document.getElementById("slideshow").offsetWidth;
 	document.getElementsByClassName("slideshowarea")[0].style.marginLeft = "-"+(slidewidth * slideItem)+"px";
+	document.getElementsByClassName("bolinha").style.color="#0000ff";
 }
 
 function toggleMenu() {
@@ -31,8 +32,11 @@ function toggleMenu() {
 
 	if (menu.style.display == 'none' || menu.style.display == '') {
 		menu.style.display = "block";
+		
 	} else {
 		menu.style.display = "none";
 	}
-
 }
+
+
+
